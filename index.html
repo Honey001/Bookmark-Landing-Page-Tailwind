@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="./bookmark-landing-page-master/images/favicon-32x32.png" />
+		<link
+			rel="stylesheet"
+			href="./src/style.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Mentor | Bookmark landing page</title>
+		<script
+			defer
+			type="module"
+			src="/src/main.js"></script>
+	</head>
+	<body
+		class="bg-white grid gap-[2.188rem] font-family items-center min-h-[120vh] relative lg:gap-20 mt-10">
+		<div
+			class="page-overlay fixed bg-[#242A45] opacity-0 pointer-events-none z-60 inset-0 transition-opacity duration-300 lg:hidden"></div>
+		<header
+			class="company-logo-nav-container flex justify-between items-center px-10 lg:px-[clamp(2.5rem,7vw,8rem)]">
+			<img
+				src="./bookmark-landing-page-master/images/logo-bookmark.svg"
+				alt="logo-bookmark" />
+			<button
+				type="button"
+				id="openMenu"
+				aria-label="open-nav-menu "
+				class="lg:hidden cursor-pointer">
+				<img
+					src="./bookmark-landing-page-master/images/icon-hamburger.svg"
+					alt="" />
+			</button>
+			<nav
+				class="navbar-container fixed top-10 left-1/2 -translate-x-1/2 min-h-screen transition-transform duration-300 ease-in-out w-full max-w-[19.339rem] lg:flex hidden lg:justify-center lg:items-center lg:top-0 lg:left-0 lg:translate-x-0 lg:relative lg:min-h-0 lg:max-w-none lg:w-auto z-100">
+				<div
+					class="inner-container grid items-center gap-10 max-w-[19.339rem] lg:flex lg:justify-center lg:items-center lg:max-w-none">
+					<div
+						class="logo-close-bar-container flex justify-between w-full lg:hidden">
+						<svg
+							width="148"
+							height="25"
+							viewBox="0 0 148 25"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg ">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M51.6907 19.0387C52.7547 19.6547 53.94 19.9627 55.2467 19.9627C56.5533 19.9627 57.7387 19.6547 58.8027 19.0387C59.8667 18.4227 60.7036 17.5796 61.3133 16.5093C61.9231 15.4391 62.228 14.2631 62.228 12.9813C62.228 11.6995 61.9231 10.5236 61.3133 9.45333C60.7036 8.38311 59.8667 7.54 58.8027 6.924C57.7387 6.308 56.5533 6 55.2467 6C53.94 6 52.7547 6.308 51.6907 6.924C50.6267 7.54 49.7898 8.38311 49.18 9.45333C48.5702 10.5236 48.2653 11.6995 48.2653 12.9813C48.2653 14.2631 48.5702 15.4391 49.18 16.5093C49.7898 17.5796 50.6267 18.4227 51.6907 19.0387ZM42.2267 6.29867H37V19.664H42.4133C43.2222 19.664 43.9596 19.5116 44.6253 19.2067C45.2911 18.9018 45.82 18.4662 46.212 17.9C46.604 17.3338 46.8 16.6836 46.8 15.9493C46.8 15.1902 46.5947 14.54 46.184 13.9987C45.7733 13.4573 45.2196 13.0622 44.5227 12.8133V12.664C45.0578 12.4027 45.4902 12.0262 45.82 11.5347C46.1498 11.0431 46.3147 10.4613 46.3147 9.78933C46.3147 9.15466 46.1342 8.56978 45.7733 8.03467C45.4124 7.49955 44.9178 7.07645 44.2893 6.76533C43.6609 6.45422 42.9733 6.29867 42.2267 6.29867ZM43.356 11.292C43.0262 11.5969 42.5876 11.7493 42.04 11.7493H39.52V8.55733H42.1147C42.6373 8.55733 43.0573 8.70978 43.3747 9.01467C43.692 9.31956 43.8507 9.696 43.8507 10.144C43.8507 10.6044 43.6858 10.9871 43.356 11.292ZM42.32 17.368C42.9298 17.368 43.4058 17.2093 43.748 16.892C44.0902 16.5747 44.2613 16.1609 44.2613 15.6507C44.2613 15.1404 44.0871 14.7236 43.7387 14.4C43.3902 14.0764 42.8924 13.9147 42.2453 13.9147H39.52V17.368H42.32ZM55.2467 17.5733C56.068 17.5733 56.8209 17.3804 57.5053 16.9947C58.1898 16.6089 58.728 16.0676 59.12 15.3707C59.512 14.6738 59.708 13.8773 59.708 12.9813C59.708 12.0853 59.512 11.2889 59.12 10.592C58.728 9.89511 58.1898 9.35378 57.5053 8.968C56.8209 8.58222 56.068 8.38933 55.2467 8.38933C54.4253 8.38933 53.6756 8.58222 52.9973 8.968C52.3191 9.35378 51.784 9.89511 51.392 10.592C51 11.2889 50.804 12.0853 50.804 12.9813C50.804 13.8773 51 14.6738 51.392 15.3707C51.784 16.0676 52.3191 16.6089 52.9973 16.9947C53.6756 17.3804 54.4253 17.5733 55.2467 17.5733ZM67.044 19.0387C68.108 19.6547 69.2933 19.9627 70.6 19.9627C71.9067 19.9627 73.092 19.6547 74.156 19.0387C75.22 18.4227 76.0569 17.5796 76.6667 16.5093C77.2764 15.4391 77.5813 14.2631 77.5813 12.9813C77.5813 11.6995 77.2764 10.5236 76.6667 9.45333C76.0569 8.38311 75.22 7.54 74.156 6.924C73.092 6.308 71.9067 6 70.6 6C69.2933 6 68.108 6.308 67.044 6.924C65.98 7.54 65.1431 8.38311 64.5333 9.45333C63.9236 10.5236 63.6187 11.6995 63.6187 12.9813C63.6187 14.2631 63.9236 15.4391 64.5333 16.5093C65.1431 17.5796 65.98 18.4227 67.044 19.0387ZM70.6 17.5733C71.4213 17.5733 72.1742 17.3804 72.8587 16.9947C73.5431 16.6089 74.0813 16.0676 74.4733 15.3707C74.8653 14.6738 75.0613 13.8773 75.0613 12.9813C75.0613 12.0853 74.8653 11.2889 74.4733 10.592C74.0813 9.89511 73.5431 9.35378 72.8587 8.968C72.1742 8.58222 71.4213 8.38933 70.6 8.38933C69.7787 8.38933 69.0289 8.58222 68.3507 8.968C67.6724 9.35378 67.1373 9.89511 66.7453 10.592C66.3533 11.2889 66.1573 12.0853 66.1573 12.9813C66.1573 13.8773 66.3533 14.6738 66.7453 15.3707C67.1373 16.0676 67.6724 16.6089 68.3507 16.9947C69.0289 17.3804 69.7787 17.5733 70.6 17.5733ZM82.3507 6.29867H79.8307V19.664H82.3507V15.744L83.8627 13.9707L87.8573 19.664H90.9373V19.5147L85.5987 11.9733L90.4333 6.448V6.29867H87.3907L82.5 12.0293H82.3507V6.29867ZM93.7778 6H97.0258L100.572 15.3893H100.722L104.268 6H107.535V19.3653H105.034V12.776L105.183 10.5547H105.034L101.636 19.3653H99.6764L96.2604 10.5547H96.1111L96.2604 12.776V19.3653H93.7778V6ZM117.472 6H114.579L109.576 19.3653H112.357L113.477 16.1733H118.592L119.712 19.3653H122.493L117.472 6ZM117.771 13.8587L116.595 10.4987L116.109 8.89333H115.96L115.475 10.4987L114.28 13.8587H117.771ZM129.425 6H124.553V19.3653H127.073V14.344H128.249L131.702 19.3653H134.596V19.216L131.012 14.0827L131.03 13.952C131.852 13.6533 132.533 13.1711 133.074 12.5053C133.616 11.8396 133.886 11.0773 133.886 10.2187C133.886 9.40977 133.7 8.68489 133.326 8.044C132.953 7.40311 132.427 6.90222 131.749 6.54133C131.071 6.18044 130.296 6 129.425 6ZM129.406 12.0293C129.979 12.0293 130.445 11.8551 130.806 11.5067C131.167 11.1582 131.348 10.7164 131.348 10.1813C131.348 9.67111 131.176 9.23556 130.834 8.87467C130.492 8.51378 130.028 8.33333 129.444 8.33333H127.073V12.0293H129.406ZM139.156 6H136.636V19.3653H139.156V15.4453L140.668 13.672L144.663 19.3653H147.743V19.216L142.404 11.6747L147.239 6.14933V6H144.196L139.306 11.7307H139.156V6Z"
+								fill="white" />
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M12.5 25C19.4036 25 25 19.4036 25 12.5C25 5.59644 19.4036 0 12.5 0C5.59644 0 0 5.59644 0 12.5C0 19.4036 5.59644 25 12.5 25ZM9 9C9 7.89543 9.89543 7 11 7H14.0789C15.1835 7 16.0789 7.89543 16.0789 9V19L12.5395 15.5609L9 19V9Z"
+								fill="white" />
+						</svg>
+
+						<button
+							type="button"
+							id="closeMenu"
+							aria-label="close-nav-menu">
+							<img
+								src="./bookmark-landing-page-master/images/icon-close.svg"
+								alt="icon-close" />
+						</button>
+					</div>
+
+					<ul
+						class="nav-list-container uppercase text-center border-y border-white text-white font-normal text-xl leading-[1.063rem] tracking-[0.144rem] lg:flex lg:justify-center lg:items-center lg:gap-12 lg:border-0 lg:text-blue-950">
+						<li
+							class="py-6 lg:py-0 lg:tracking-[0.016rem] lg:hover:text-red-400">
+							<a
+								href="#"
+								class=" "
+								>Features</a
+							>
+						</li>
+						<li
+							class="py-6 border-bs border-white lg:hover:text-red-400">
+							<a href="#"> Pricing</a>
+						</li>
+						<li
+							class="py-6 border-bs border-white lg:hover:text-red-400">
+							<a href="#"> Contact</a>
+						</li>
+						<li
+							class="relative pt-6 border-bs border-white lg:border-0 lg:pt-0">
+							<a
+								href="#"
+								class="border-2 flex items-center justify-center border-white rounded-[0.313rem] text-center h-12 lg:border-0 lg:bg-red-400 lg:h-10 lg:px-8 lg:py-4 lg:text-white lg:leading-2 lg:hover:bg-transparent lg:hover:border-red-400 lg:hover:text-red-400 lg:hover:border-2 transition-all ease-in-out">
+								Login
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main
+			class="main-container grid gap-32 items-center lg:gap-10 sm:pt-10">
+			<section
+				class="hero-section-1-img-content-container grid items-center sm:text-center gap-12 lg:grid lg:grid-cols-[1fr_0.9fr] lg:gap-6">
+				<article
+					class="relative hero-img-bg-container overflow-x-clip lg:overflow-x-visible before:bg-blue-600 before:content-[''] before:h-[12.688rem] before:w-[70vw] before:absolute before:right-0 before:bottom-[-10%] sm:before:bottom-[-20%] before:z-0 before:rounded-s-[19.781rem] my-6 sm:my-0 sm:before:h-[80%] lg:before:w-[80%] lg:before:bottom-[-10%] lg:before:rounded-s-[34.375rem] lg:order-2 sm:before:right-0 lg:my-0 sm:before:top-30 sm:before:w-[80%]">
+					<figure
+						class="hero-img-container mx-10 relative z-50 w-[min(19.423rem,calc(100%-5rem))] h-[12.906rem] sm:h-[40%] sm:w-[90%] sm:right-1 right-[-5%]">
+						<img
+							src="./bookmark-landing-page-master/images/illustration-hero.svg"
+							alt="illustration-features-tab-1" />
+					</figure>
+				</article>
+
+				<article
+					class="hero-section-1-content-container grid items-center text-center gap-6 mx-10 lg:mx-0 lg:px-[clamp(2.5rem,7vw,8rem)] lg:text-left sm:pt-10 lg:order-1">
+					<h2 class="hero-section-1-title headlines sm:text-5xl">
+						A Simple Bookmark Manager
+					</h2>
+					<p class="hero-section-1-content paragraph sm:text-lg">
+						A clean and simple interface to organize your favourite
+						websites. Open a new browser tab and see your sites load
+						instantly. Try it for free.
+					</p>
+					<div
+						class="hero-section-1-buttons-container flex justify-center items-center gap-4 flex-nowrap sm:items-start lg:justify-start">
+						<a
+							href=""
+							class="bg-blue-600 text-white font-normal text-[0.938rem] py-3 px-3.5 rounded-[0.313rem] whitespace-nowrap max-[400px]:text-[0.813rem] max-[400px]:px-2 max-[300px]:py-2.5 sm:px-6 lg:hover:bg-transparent lg:hover:text-blue-600 lg:hover:border-2 lg:hover:border-blue-600 transition-all ease-in-out">
+							Get it on Chrome
+						</a>
+						<a
+							href=""
+							class="bg-[#F7F7F7] text-blue-950 font-normal text-[0.938rem] py-3 px-3.5 rounded-[0.313rem] whitespace-nowrap max-[400px]:text-[0.813rem] max-[400px]:px-2 max-[300px]:py-2.5 lg:px-6 lg:hover:bg-transparent lg:hover:text-grey-600 lg:hover:border-2 lg:hover:border-grey-600 transition-all ease-in-out">
+							Get it on Firefox
+						</a>
+					</div>
+				</article>
+			</section>
+
+			<section
+				class="features-content-img-main-container grid items-center gap-8 paragraph sm:gap-18 lg:mt-25 lg:w-full lg:grid-cols-2">
+				<article
+					class="feature-content-container grid items-center gap-4 text-center mx-10 lg:mx-115 lg:col-span-2 lg:col-start-1 lg:row-start-1">
+					<h2 class="feature-title headlines">Features</h2>
+					<p class="feature-content">
+						Our aim is to make it quick and easy for you to access
+						your favourite websites. Your bookmarks sync between
+						your devices so you can access them on the go.
+					</p>
+				</article>
+
+				<article
+					class="display-hero-section-container-content grid items-center gap-11 lg:contents">
+					<ul
+						class="feature-list-container flex flex-col justify-center items-center text-center mx-10 sm:flex-row sm:justify-between sm:border-b lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-[20%]">
+						<hr class="w-full text-[#979797] sm:hidden" />
+						<li
+							class="py-4 border-be-4 border-red-400 sm:px-4 sm:pt-0 display-link lg:hover:text-red-400 transition-all ease-in-out"
+							data-index="0">
+							<a href=""> Simple Bookmarking </a>
+						</li>
+						<hr class="w-full text-[#979797] sm:hidden" />
+						<li
+							class="py-4 sm:px-4 sm:pt-0 display-link lg:hover:text-red-400 transition-all ease-in-out"
+							data-index="1">
+							<a href="">Speedy Searching</a>
+						</li>
+						<hr class="w-full text-[#979797] sm:hidden" />
+						<li
+							class="py-4 sm:px-4 sm:pt-0 display-link lg:hover:text-red-400 transition-all ease-in-out"
+							data-index="2">
+							<a href="">Easy Sharing</a>
+						</li>
+						<hr class="w-full text-[#979797] sm:hidden" />
+					</ul>
+					<div
+						class="feature-hero-img-bg-container relative overflow-x-clip before:bg-blue-600 before:content-[''] before:h-[12.688rem] before:w-[70vw] before:absolute before:left-0 before:bottom-[-10%] sm:before:bottom-[-20%] before:z-0 before:rounded-e-[19.781rem] mbe-8 my-6 sm:my-0 sm:before:h-full lg:before:w-[80%] lg:before:bottom-[-20%] sm:before:left-[-12%] lg:my-0 sm:before:w-[80%] lg:col-start-1 lg:row-start-3">
+						<figure
+							class="feature-hero-img-container mx-10 relative z-50 w-[min(19.423rem,calc(100%-5rem))] h-auto sm:w-[90%] sm:left-1 right-[-5%]">
+							<img
+								src="./bookmark-landing-page-master/images/illustration-features-tab-1.svg"
+								alt="illustration-features-tab-1"
+								id="fig-0" />
+							<img
+								src="./bookmark-landing-page-master/images/illustration-features-tab-2.svg"
+								alt="illustration-features-tab-2"
+								class="hidden"
+								id="fig-1" />
+							<img
+								src="./bookmark-landing-page-master/images/illustration-features-tab-3.svg"
+								alt="illustration-features-tab-3"
+								class="hidden"
+								id="fig-2" />
+						</figure>
+					</div>
+				</article>
+
+				<article
+					class="feature-img-content-container grid place-items-center gap-4 text-center mx-10 lg:col-start-2 lg:row-start-3 lg:mx-0 lg:w-[min(100%,28rem)] lg:self-center lg:text-left lg:place-items-start lg:justify-self-start sm:mt-14 lg:mt-0">
+					<h2 class="img-feature-title headlines">
+						Bookmark in one click
+					</h2>
+					<p class="img-feature-content">
+						Organize your bookmarks however you like. Our simple
+						drag-and-drop interface gives you complete control over
+						how you manage your favourite sites.
+					</p>
+					<a
+						href=""
+						class="bg-blue-600 text-white font-normal text-[0.938rem] py-2.5 px-6 rounded-[0.313rem]"
+						>More Info</a
+					>
+				</article>
+			</section>
+
+			<section
+				class="download-section-container grid place-items-center gap-10 mx-10 text-center paragraph lg:mt-35 lg:gap-12 sm:gap-16 text-blue-950">
+				<article
+					class="download-content-container grid place-items-center gap-4 lg:mx-110 lg:text-4xl">
+					<h2 class="download-title headlines">
+						Download the extension
+					</h2>
+					<p class="download-content paragraph">
+						We’ve got more browsers in the pipeline. Please do let
+						us know if you’ve got a favourite you’d like us to
+						prioritize.
+					</p>
+				</article>
+
+				<article
+					class="download-option-container grid place-items-center gap-10 text-center sm:grid sm:grid-cols-[1fr_1fr_1fr] sm:gap-2 lg:gap-8 lg:justify-between">
+					<div
+						class="chrome-container extentions-container shadow-drop pt-6.5 pb-8 lg:mb-20 lg:pt-12 lg:pb-8 sm:pt-8 sm:pb-6">
+						<div
+							class="chrome-image-container img-extentions-container">
+							<figure class="chrome-container sm:w-18">
+								<img
+									src="./bookmark-landing-page-master/images/logo-chrome.svg"
+									alt="logo-chrome" />
+							</figure>
+							<article
+								class="chrome content text-extentions-container">
+								<h3 class="chrome-title sub-heading sm:text-xl">
+									Add to Chrome
+								</h3>
+								<p class="chrome-version-content sm:text-sm">
+									Minimum version 62
+								</p>
+							</article>
+						</div>
+						<figure class="line">
+							<img
+								src="./bookmark-landing-page-master/images/bg-dots.svg"
+								alt="" />
+						</figure>
+						<button
+							type="button"
+							class="bg-blue-600 text-white font-normal text-[0.938rem] py-2.5 px-6 rounded-[0.313rem] text-nowrap sm:text-sm lg:hover:bg-transparent lg:hover:text-blue-600 lg:hover:border-2 lg:hover:border-blue-600 transition-all ease-in-out">
+							<a href=""> Add & Install Extension </a>
+						</button>
+					</div>
+
+					<div
+						class="firefox-container extentions-container shadow-drop lg:my-10 pt-6.5 pb-8 lg:mb-20 lg:pt-12 lg:pb-8 sm:pt-8 sm:pb-6">
+						<div
+							class="firefox-image-container img-extentions-container">
+							<figure class="firefox-container sm:w-18">
+								<img
+									src="./bookmark-landing-page-master/images/logo-firefox.svg"
+									alt="logo-firefox" />
+							</figure>
+							<article
+								class="firefox content text-extentions-container">
+								<h3
+									class="firefox-title sub-heading sm:text-xl">
+									Add to firefox
+								</h3>
+								<p class="firefox-version-content sm:text-sm">
+									Minimum version 62
+								</p>
+							</article>
+						</div>
+						<figure class="line">
+							<img
+								src="./bookmark-landing-page-master/images/bg-dots.svg"
+								alt="" />
+						</figure>
+						<button
+							type="button"
+							class="bg-blue-600 text-white font-normal text-[0.938rem] py-2.5 px-6 rounded-[0.313rem] text-nowrap sm:text-sm lg:hover:bg-transparent lg:hover:text-blue-600 lg:hover:border-2 lg:hover:border-blue-600 transition-all ease-in-out">
+							<a href=""> Add & Install Extension </a>
+						</button>
+					</div>
+
+					<div
+						class="opera-container extentions-container shadow-drop lg:mt-20 pt-6.5 pb-8 lg:mb-20 lg:pt-12 lg:pb-8 sm:pt-8 sm:pb-6">
+						<div
+							class="opera-image-container img-extentions-container">
+							<figure class="opera-container sm:w-18">
+								<img
+									src="./bookmark-landing-page-master/images/logo-opera.svg"
+									alt="logo-opera" />
+							</figure>
+							<article
+								class="opera content text-extentions-container">
+								<h3 class="opera-title sub-heading sm:text-xl">
+									Add to opera
+								</h3>
+								<p class="opera-version-content sm:text-sm">
+									Minimum version 62
+								</p>
+							</article>
+						</div>
+						<figure class="line">
+							<img
+								src="./bookmark-landing-page-master/images/bg-dots.svg"
+								alt="" />
+						</figure>
+						<button
+							type="button"
+							class="bg-blue-600 text-white font-normal text-[0.938rem] py-2.5 px-6 rounded-[0.313rem] text-nowrap sm:text-sm lg:hover:bg-transparent lg:hover:text-blue-600 lg:hover:border-2 lg:hover:border-blue-600 transition-all ease-in-out">
+							<a href=""> Add & Install Extension </a>
+						</button>
+					</div>
+				</article>
+			</section>
+
+			<section
+				class="faq-container grid paragraph gap-14 mx-10 text-center place-items-center">
+				<article
+					class="faq-content-container grid place-items-center gap-4">
+					<h2 class="faq-title headlines">
+						Frequently Asked Questions
+					</h2>
+					<p class="faq-content">
+						Here are some of our FAQs. If you have any other
+						questions you’d like answered please feel free to email
+						us.
+					</p>
+				</article>
+
+				<article
+					class="faq-questions-container grid items-center w-full lg:w-3/5">
+					<hr class="hidden sm:flex text-[#979797]" />
+					<details
+						class="faq-question-container py-4 cursor-pointer"
+						name="faq-group">
+						<summary
+							class="question-container flex justify-between items-center hover-state-text">
+							<h4 class="faq-question">What is Bookmark?</h4>
+						</summary>
+						<div class="faq-answer-container mt-4">
+							<p class="faq-answer">
+								Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit. Fusce tincidunt justo eget
+								ultricies fringilla. Phasellus blandit ipsum
+								quis quam ornare mattis.
+							</p>
+						</div>
+					</details>
+					<hr class="text-[#979797]" />
+					<details
+						class="faq-question-container cursor-pointer py-4"
+						name="faq-group">
+						<summary
+							class="question-container flex justify-between items-center hover-state-text">
+							<h4 class="faq-question">
+								How can I request a new browser?
+							</h4>
+						</summary>
+						<div class="faq-answer-container mt-4">
+							<p class="faq-answer">
+								Vivamus luctus eros aliquet convallis ultricies.
+								Mauris augue massa, ultricies non ligula.
+								Suspendisse imperdiet. Vivamus luctus eros
+								aliquet convallis ultricies. Mauris augue massa,
+								ultricies non ligula. Suspendisse imperdie
+								tVivamus luctus eros aliquet convallis
+								ultricies. Mauris augue massa, ultricies non
+								ligula. Suspendisse imperdiet.
+							</p>
+						</div>
+					</details>
+					<hr />
+					<details
+						class="faq-question-container cursor-pointer py-4"
+						name="faq-group">
+						<summary
+							class="question-container flex justify-between items-center hover-state-text">
+							<h4 class="faq-question">Is there a mobile app?</h4>
+						</summary>
+						<div class="faq-answer-container mt-4">
+							<p class="faq-answer">
+								Sed consectetur quam id neque fermentum
+								accumsan. Praesent luctus vestibulum dolor, ut
+								condimentum urna vulputate eget. Cras in ligula
+								quis est pharetra mattis sit amet pharetra
+								purus. Sed sollicitudin ex et ultricies
+								bibendum.
+							</p>
+						</div>
+					</details>
+					<hr />
+					<details
+						class="faq-question-container cursor-pointer py-4"
+						name="faq-group">
+						<summary
+							class="question-container flex justify-between items-center hover-state-text">
+							<h4 class="faq-question">
+								What about other Chromium browsers?
+							</h4>
+						</summary>
+						<div class="faq-answer-container mt-4">
+							<p class="faq-answer">
+								Integer condimentum ipsum id imperdiet finibus.
+								Vivamus in placerat mi, at euismod dui. Aliquam
+								vitae neque eget nisl gravida pellentesque non
+								ut velit.
+							</p>
+						</div>
+					</details>
+					<hr />
+				</article>
+
+				<a
+					href=""
+					class="bg-blue-600 text-white font-normal text-[0.938rem] py-2.5 px-4 rounded-[0.313rem]"
+					>More Info</a
+				>
+			</section>
+		</main>
+
+		<footer class="mt-32 text-white w-full">
+			<section
+				class="email-waitlist-main-container bg-blue-600 grid items-center text-center py-12 w-full">
+				<article
+					class="email-waitlist-container mx-10 grid items-center gap-8 sm:place-items-center">
+					<div
+						class="waitlist-info-container grid place-items-center sm:gap-6">
+						<p
+							class="no-of-people-joined text-clamp-sm tracking-[0.313rem] uppercase leading-[3] font-medium text-nowrap">
+							35,000+ already joined
+						</p>
+						<h2
+							class="waitlist-title font-medium text-clamp-lg sm:w-4/5">
+							<span class="nowrap text-nowrap sm:text-wrap"
+								>Stay up-to-date with</span
+							>
+							what we’re doing
+						</h2>
+					</div>
+
+					<div
+						class="email-container grid items-center sm:place-items-center gap-4">
+						<form
+							action=""
+							id="myform"
+							novalidate
+							class="grid items-center gap-4 sm:grid-cols-[3fr_1fr]">
+							<div
+								class="email-input-error-container bg-red-400 flex flex-col rounded-lg self-start paragraph gap-2">
+								<div
+									class="input-error-container box-border flex justify-between px-4 py-2 sm:px-6 bg-white items-start rounded-lg border-0 border-red-400 gap-2">
+									<input
+										type="email"
+										name="email"
+										id=""
+										placeholder="example@email/com"
+										class="border-0 w-full h-auto" />
+									<img
+										src="./bookmark-landing-page-master/images/icon-error.svg"
+										alt="icon-error"
+										class="hidden" />
+								</div>
+								<small
+									class="email-error-message text-white font-medium text-[10px] px-4 pb-1.5 leading-[1.20] text-left hidden">
+									whoops, make sure it's an email
+								</small>
+							</div>
+
+							<button
+								type="submit"
+								class="bg-red-400 text-white font-normal text-[0.938rem] py-2.5 px-6 rounded-[0.313rem] cursor-pointer lg:hover:bg-white lg:hover:border-2 lg:hover:border-red-400 lg:hover:text-red-400 transition-all ease-in-out">
+								Contact Us
+							</button>
+						</form>
+					</div>
+				</article>
+			</section>
+
+			<section
+				class="footer-inner-container bg-blue-950 text-white flex justify-center items-center flex-col py-8 lg:flex-row lg:w-full">
+				<article
+					class="fotter-nav-list grid place-items-center gap-12 lg:grid-cols-2 sm:flex sm:justify-center lg:justify-between sm:w-4/5">
+					<div
+						class="footer-nav-left-container grid place-items-center gap-12 sm:flex sm:items-center lg:gap-16">
+						<svg
+							width="148"
+							height="25"
+							viewBox="0 0 148 25"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M51.6907 19.0387C52.7547 19.6547 53.94 19.9627 55.2467 19.9627C56.5533 19.9627 57.7387 19.6547 58.8027 19.0387C59.8667 18.4227 60.7036 17.5796 61.3133 16.5093C61.9231 15.4391 62.228 14.2631 62.228 12.9813C62.228 11.6995 61.9231 10.5236 61.3133 9.45333C60.7036 8.38311 59.8667 7.54 58.8027 6.924C57.7387 6.308 56.5533 6 55.2467 6C53.94 6 52.7547 6.308 51.6907 6.924C50.6267 7.54 49.7898 8.38311 49.18 9.45333C48.5702 10.5236 48.2653 11.6995 48.2653 12.9813C48.2653 14.2631 48.5702 15.4391 49.18 16.5093C49.7898 17.5796 50.6267 18.4227 51.6907 19.0387ZM42.2267 6.29867H37V19.664H42.4133C43.2222 19.664 43.9596 19.5116 44.6253 19.2067C45.2911 18.9018 45.82 18.4662 46.212 17.9C46.604 17.3338 46.8 16.6836 46.8 15.9493C46.8 15.1902 46.5947 14.54 46.184 13.9987C45.7733 13.4573 45.2196 13.0622 44.5227 12.8133V12.664C45.0578 12.4027 45.4902 12.0262 45.82 11.5347C46.1498 11.0431 46.3147 10.4613 46.3147 9.78933C46.3147 9.15466 46.1342 8.56978 45.7733 8.03467C45.4124 7.49955 44.9178 7.07645 44.2893 6.76533C43.6609 6.45422 42.9733 6.29867 42.2267 6.29867ZM43.356 11.292C43.0262 11.5969 42.5876 11.7493 42.04 11.7493H39.52V8.55733H42.1147C42.6373 8.55733 43.0573 8.70978 43.3747 9.01467C43.692 9.31956 43.8507 9.696 43.8507 10.144C43.8507 10.6044 43.6858 10.9871 43.356 11.292ZM42.32 17.368C42.9298 17.368 43.4058 17.2093 43.748 16.892C44.0902 16.5747 44.2613 16.1609 44.2613 15.6507C44.2613 15.1404 44.0871 14.7236 43.7387 14.4C43.3902 14.0764 42.8924 13.9147 42.2453 13.9147H39.52V17.368H42.32ZM55.2467 17.5733C56.068 17.5733 56.8209 17.3804 57.5053 16.9947C58.1898 16.6089 58.728 16.0676 59.12 15.3707C59.512 14.6738 59.708 13.8773 59.708 12.9813C59.708 12.0853 59.512 11.2889 59.12 10.592C58.728 9.89511 58.1898 9.35378 57.5053 8.968C56.8209 8.58222 56.068 8.38933 55.2467 8.38933C54.4253 8.38933 53.6756 8.58222 52.9973 8.968C52.3191 9.35378 51.784 9.89511 51.392 10.592C51 11.2889 50.804 12.0853 50.804 12.9813C50.804 13.8773 51 14.6738 51.392 15.3707C51.784 16.0676 52.3191 16.6089 52.9973 16.9947C53.6756 17.3804 54.4253 17.5733 55.2467 17.5733ZM67.044 19.0387C68.108 19.6547 69.2933 19.9627 70.6 19.9627C71.9067 19.9627 73.092 19.6547 74.156 19.0387C75.22 18.4227 76.0569 17.5796 76.6667 16.5093C77.2764 15.4391 77.5813 14.2631 77.5813 12.9813C77.5813 11.6995 77.2764 10.5236 76.6667 9.45333C76.0569 8.38311 75.22 7.54 74.156 6.924C73.092 6.308 71.9067 6 70.6 6C69.2933 6 68.108 6.308 67.044 6.924C65.98 7.54 65.1431 8.38311 64.5333 9.45333C63.9236 10.5236 63.6187 11.6995 63.6187 12.9813C63.6187 14.2631 63.9236 15.4391 64.5333 16.5093C65.1431 17.5796 65.98 18.4227 67.044 19.0387ZM70.6 17.5733C71.4213 17.5733 72.1742 17.3804 72.8587 16.9947C73.5431 16.6089 74.0813 16.0676 74.4733 15.3707C74.8653 14.6738 75.0613 13.8773 75.0613 12.9813C75.0613 12.0853 74.8653 11.2889 74.4733 10.592C74.0813 9.89511 73.5431 9.35378 72.8587 8.968C72.1742 8.58222 71.4213 8.38933 70.6 8.38933C69.7787 8.38933 69.0289 8.58222 68.3507 8.968C67.6724 9.35378 67.1373 9.89511 66.7453 10.592C66.3533 11.2889 66.1573 12.0853 66.1573 12.9813C66.1573 13.8773 66.3533 14.6738 66.7453 15.3707C67.1373 16.0676 67.6724 16.6089 68.3507 16.9947C69.0289 17.3804 69.7787 17.5733 70.6 17.5733ZM82.3507 6.29867H79.8307V19.664H82.3507V15.744L83.8627 13.9707L87.8573 19.664H90.9373V19.5147L85.5987 11.9733L90.4333 6.448V6.29867H87.3907L82.5 12.0293H82.3507V6.29867ZM93.7778 6H97.0258L100.572 15.3893H100.722L104.268 6H107.535V19.3653H105.034V12.776L105.183 10.5547H105.034L101.636 19.3653H99.6764L96.2604 10.5547H96.1111L96.2604 12.776V19.3653H93.7778V6ZM117.472 6H114.579L109.576 19.3653H112.357L113.477 16.1733H118.592L119.712 19.3653H122.493L117.472 6ZM117.771 13.8587L116.595 10.4987L116.109 8.89333H115.96L115.475 10.4987L114.28 13.8587H117.771ZM129.425 6H124.553V19.3653H127.073V14.344H128.249L131.702 19.3653H134.596V19.216L131.012 14.0827L131.03 13.952C131.852 13.6533 132.533 13.1711 133.074 12.5053C133.616 11.8396 133.886 11.0773 133.886 10.2187C133.886 9.40977 133.7 8.68489 133.326 8.044C132.953 7.40311 132.427 6.90222 131.749 6.54133C131.071 6.18044 130.296 6 129.425 6ZM129.406 12.0293C129.979 12.0293 130.445 11.8551 130.806 11.5067C131.167 11.1582 131.348 10.7164 131.348 10.1813C131.348 9.67111 131.176 9.23556 130.834 8.87467C130.492 8.51378 130.028 8.33333 129.444 8.33333H127.073V12.0293H129.406ZM139.156 6H136.636V19.3653H139.156V15.4453L140.668 13.672L144.663 19.3653H147.743V19.216L142.404 11.6747L147.239 6.14933V6H144.196L139.306 11.7307H139.156V6Z"
+								fill="white" />
+							<circle
+								cx="12.5"
+								cy="12.5"
+								r="12.5"
+								fill="#5267DF" />
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M11 7C9.89543 7 9 7.89543 9 9V19L12.5395 15.5609L16.0789 19V9C16.0789 7.89543 15.1835 7 14.0789 7H11Z"
+								fill="white" />
+						</svg>
+
+						<nav class="footer-nav-list-container">
+							<ul
+								class="grid place-items-center gap-6 font-normal uppercase sm:grid-cols-[1fr_1fr_1fr] lg:flex lg:justify-between lg:w-full lg:gap-12">
+								<li class="hover-state-text">
+									<a href="">Features </a>
+								</li>
+								<li class="hover-state-text">
+									<a href="">Pricing </a>
+								</li>
+								<li class="hover-state-text">
+									<a href=""> Contact </a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+
+					<div
+						class="social-media-container flex justify-between gap-12 lg:gap-10 items-center sm:justify-self-end sm:gap-6">
+						<a
+							href=""
+							class="transition-colors lg:hover:text-red-400"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								aria-hidden="true">
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+							</svg>
+						</a>
+						<a
+							href=""
+							class="transition-colors lg:hover:text-red-400">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="20"
+								aria-hidden="true">
+								<path
+									fill="currentColor"
+									fill-rule="evenodd"
+									d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
+							</svg>
+						</a>
+					</div>
+				</article>
+			</section>
+		</footer>
+	</body>
+</html>
