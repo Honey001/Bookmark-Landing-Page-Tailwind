@@ -5,7 +5,7 @@
 	--breakpoint-sm: 520px;
 	--font-family: "Rubik", sans-serif;
 	--shadow-drop: 0 10px 20px 5px rgba(73, 93, 207, 0.05);
-	--shadow-buttons: 0 8px 8px -4px rgba(73, 93, 207, 0.05);
+	--shadow-buttons: 0 8px 8px 4px rgba(73, 93, 207, 0.05);
 }
 @utility text-clamp-sm {
 	font-size: clamp(0.625rem, 1.5vw + 0.25rem, 0.75rem);
