@@ -52,7 +52,7 @@ summary::after {
 	content: url("./bookmark-landing-page-master/images/icon-arrow.svg");
 }
 details[open] summary:after {
-	content: url("bookmark-landing-page-master/images/Path 3.png");
+	content: url("./bookmark-landing-page-master/images/Path 3.png");
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
